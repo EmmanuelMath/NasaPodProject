@@ -15,7 +15,7 @@ struct RecentPicturesView: View {
         NavigationView {
             
             List(viewModel.recentPictures) { pictureData in
-                NavigationLink(destination: PictureDetailView(pictureData: pictureData)) {
+                NavigationLink(destination: FeedPicturesOfTheDay(pictureData: pictureData)) {
                     VStack(alignment: .leading) {
                         
                         Text(pictureData.copyright ?? "")
@@ -26,14 +26,9 @@ struct RecentPicturesView: View {
                             .font(.title3)
                             .bold()
                         
-                        Text(pictureData.date)
-                            .font(.subheadline)
-                            .bold()
-                            .foregroundColor(.gray)
                     }
                 }
             }
-//            .navigationTitle("Recent Pictures")
         }
         .onAppear {
             viewModel.fetchRecentPictures()
