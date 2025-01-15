@@ -1,4 +1,12 @@
+//
+//  MockApiNetworking.swift
+//  NasaPodProject
+//
+//  Created by Emmanuel Mathar on 15/01/2025.
+//
+
 import XCTest
+@testable import NasaPodProject
 
 class MockApiNetworking: ApiNetworking {
   var recentPicturesResult: Result<[PictureOfTheDay], Error> = .success([])
