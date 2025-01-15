@@ -1,3 +1,11 @@
+//
+//  README.md
+//  NasaPodProject
+//
+//  Created by Emmanuel Mathar on 15/01/2025.
+//
+
+
 # NasaPodProject
 
 ## Overview
@@ -122,7 +130,6 @@ The app integrates with NASA's APOD API for its features.
 
 - **Date Logic**: The `start_date` and `end_date` parameters are dynamically calculated using `Utility.swift`.
 
-- **Error Handling**: Networking errors and decoding failures are gracefully managed, with empty states or error messages displayed in the UI.
 
 ### Example API Response
 ```json
