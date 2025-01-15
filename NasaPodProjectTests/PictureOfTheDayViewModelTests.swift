@@ -5,7 +5,6 @@
 //  Created by Emmanuel Mathar on 15/01/2025.
 //
 
-
 import XCTest
 @testable import NasaPodProject
 
@@ -16,7 +15,7 @@ class PictureOfTheDayViewModelTests: XCTestCase {
         let mockService = MockApiNetworking()
         mockService.result = .success(PictureOfTheDay(
                                                        copyright : "Author",
-                                                        date: "2024-12-31",
+                                                       date: "2024-12-31",
                                                        title: "Test Title",
                                                        explanation: "Test explanation",
                                                        url: "https://test.com/image1.jpg",
@@ -56,17 +55,3 @@ class PictureOfTheDayViewModelTests: XCTestCase {
     }
 }
 
-class MockApiNetworking: ApiNetworking {
-    var result: Result<PictureOfTheDay, Error> = .success(PictureOfTheDay(
-        
-        copyright : "",
-        date: "",
-        title: "",
-        explanation: "",
-        url: "",
-        mediaType: ""))
-
-    override func fetchPictureOfTheDay(completion: @escaping (Result<PictureOfTheDay, Error>) -> Void) {
-        completion(result)
-    }
-}
