@@ -12,7 +12,7 @@ class PictureOfTheDayViewModel: ObservableObject {
     @Published var todayPicture: PictureOfTheDay?
     @Published var errorMessage: String?
 
-    private let service = ApiNetworking.shared
+    var service = ApiNetworking.shared
 
     func fetchTodayPicture() {
         service.fetchPictureOfTheDay { [weak self] result in

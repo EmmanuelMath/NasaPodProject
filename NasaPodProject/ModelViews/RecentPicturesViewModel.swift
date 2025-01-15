@@ -13,7 +13,7 @@ class RecentPicturesViewModel: ObservableObject {
     @Published var errorMessage: String?
 
 
-    private let service = ApiNetworking()
+    @Published var service = ApiNetworking()
 
     func fetchRecentPictures() {
         service.fetchRecentPictures { [weak self] picturesData in
