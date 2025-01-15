@@ -1,3 +1,10 @@
+//
+//  ApiNetworkingTests.swift
+//  NasaPodProject
+//
+//  Created by Emmanuel Mathar on 15/01/2025.
+//
+
 import XCTest
 @testable import NasaPodProject
 
@@ -33,12 +40,12 @@ class ApiNetworkingTests: XCTestCase {
 
         apiNetworking.fetchPictureOfTheDay { result in
             switch result {
-            case .success(let picture):
-                XCTAssertNotNil(picture)
-                XCTAssertNotNil(picture.date)
-                XCTAssertNotNil(picture.explanation)
-                XCTAssertNotNil(picture.title)
-                XCTAssertNotNil(picture.url)
+            case .success(let pictureData):
+                XCTAssertNotNil(pictureData)
+                XCTAssertNotNil(pictureData.date)
+                XCTAssertNotNil(pictureData.explanation)
+                XCTAssertNotNil(pictureData.title)
+                XCTAssertNotNil(pictureData.url)
                 expectation.fulfill()
             case .failure(let error):
                 XCTFail("Error fetching picture of the day: \(error)")
@@ -52,9 +59,9 @@ class ApiNetworkingTests: XCTestCase {
         let apiNetworking = ApiNetworking.shared
         let expectation = XCTestExpectation(description: "Fetch recent pictures")
 
-        apiNetworking.fetchRecentPictures { pictures in
-            XCTAssertNotNil(pictures)
-            XCTAssertNotEqual(pictures.count, 0)
+        apiNetworking.fetchRecentPictures { picturesData in
+            XCTAssertNotNil(picturesData)
+            XCTAssertNotEqual(picturesData.count, 0)
             expectation.fulfill()
         }
 
