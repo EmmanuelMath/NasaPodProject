@@ -11,7 +11,7 @@ import Foundation
 class ApiNetworking {
     static let shared = ApiNetworking()
     private let baseURL = "https://api.nasa.gov/planetary/apod"
-    private let apiKey = "jPMTSQdqe0q2AKJw8F89Ms6nLfArhdMW6qIcaTua"
+    private let apiKey = "DEMO_API"
     
     func fetchPictureOfTheDay(completion: @escaping (Result<PictureOfTheDay, Error>) -> Void) {
         guard let url = URL(string: "\(baseURL)?api_key=\(apiKey)") else {
