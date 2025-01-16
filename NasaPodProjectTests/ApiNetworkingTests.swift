@@ -12,7 +12,6 @@ class ApiNetworkingTests: XCTestCase {
 
 
     func test_getStartDate_returnsDateString30DaysBeforeTodaysDate() {
-        let apiNetworking = ApiNetworking.shared
         let expectedDateFormatter = DateFormatter()
         expectedDateFormatter.dateFormat = "yyyy-MM-dd"
 
