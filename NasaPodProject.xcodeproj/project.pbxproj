@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74D73E8A2D38801F0078F8B0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 74D73E892D387FD70078F8B0 /* README.md */; };
+		74D73E8F2D3884000078F8B0 /* RESOURCES.md in Resources */ = {isa = PBXBuildFile; fileRef = 74D73E8E2D3883F30078F8B0 /* RESOURCES.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		744A9E6D2D35EBF2006403E7 /* NasaPodProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = NasaPodProjectTests.xctest; path = "/Users/matharus/Documents/Projects/NasaPodProject/build/Debug-iphoneos/NasaPodProject.app/PlugIns/NasaPodProjectTests.xctest"; sourceTree = "<absolute>"; };
 		744A9E772D35EBF2006403E7 /* NasaPodProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = NasaPodProjectUITests.xctest; path = "/Users/matharus/Documents/Projects/NasaPodProject/build/Debug-iphoneos/NasaPodProjectUITests-Runner.app/PlugIns/NasaPodProjectUITests.xctest"; sourceTree = "<absolute>"; };
 		74D73E892D387FD70078F8B0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		74D73E8E2D3883F30078F8B0 /* RESOURCES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RESOURCES.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +77,7 @@
 		744A9E542D35EBF0006403E7 = {
 			isa = PBXGroup;
 			children = (
+				74D73E8E2D3883F30078F8B0 /* RESOURCES.md */,
 				74D73E892D387FD70078F8B0 /* README.md */,
 				744A9E5F2D35EBF0006403E7 /* NasaPodProject */,
 				744A9E702D35EBF2006403E7 /* NasaPodProjectTests */,
@@ -198,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74D73E8F2D3884000078F8B0 /* RESOURCES.md in Resources */,
 				74D73E8A2D38801F0078F8B0 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,7 +5,6 @@
 //  Created by Emmanuel Mathar on 15/01/2025.
 //
 
-
 # NasaPodProject
 
 ## Overview
@@ -13,6 +12,27 @@ NasaPodProject is an iOS application that fetches data from NASA's Astronomy Pic
 1. Displaying today's Astronomy Picture of the Day along with metadata.
 2. Viewing the 30 most recent APOD entries, with the ability to navigate to detailed views.
 
+
+---
+# Assumptions About the API Response
+
+The implementation assumes that the API returns a JSON array where each element is an object representing a single Astronomy Picture of the Day (APOD) with the following structure:
+
+### 1. **Mandatory Fields**:
+- `date` (string): The date of the APOD in `YYYY-MM-DD` format.
+- `explanation` (string): A detailed description of the image or video.
+- `media_type` (string): Type of media, e.g., "image" or "video."
+- `title` (string): Title of the APOD.
+- `url` (string): URL to the image or video of the APOD.
+
+### 2. **Optional Fields**:
+- `hdurl` (string): URL to the high-definition version of the APOD.
+- `copyright` (string): Attribution or copyright information (if available).
+- `service_version` (string): Version of the API service.
+
+### 3. **Data Constraints**:
+- Each object is expected to have a unique `date`.
+- Additional fields in the response will be ignored unless explicitly specified in the requirements.
 ---
 
 ## File Structure
