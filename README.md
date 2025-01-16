@@ -1,10 +1,3 @@
-//
-//  README.md
-//  NasaPodProject
-//
-//  Created by Emmanuel Mathar on 15/01/2025.
-//
-
 # NasaPodProject
 
 ## Overview
