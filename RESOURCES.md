@@ -1,10 +1,3 @@
-//
-//  RESOURCES.md
-//  NasaPodProject
-//
-//  Created by Emmanuel Mathar on 16/01/2025.
-//
-
 # Documentation and Resources Used
 
 This project utilises various resources to achieve its functionality. Below is a list of references used during development, categorised for convenience.
