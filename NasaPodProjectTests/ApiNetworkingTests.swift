@@ -16,8 +16,8 @@ class ApiNetworkingTests: XCTestCase {
         let expectedDateFormatter = DateFormatter()
         expectedDateFormatter.dateFormat = "yyyy-MM-dd"
 
-        let todaysDate = apiNetworking.getTodaysDate()
-        let startDateString = apiNetworking.getStartDate()
+        let todaysDate = getTodaysDate()
+        let startDateString = getStartDate()
         guard let todayDateObject = expectedDateFormatter.date(from: todaysDate) else {
             XCTFail("Error: Invalid todaysDate format")
             return

@@ -13,36 +13,6 @@ class ApiNetworking {
     private let baseURL = "https://api.nasa.gov/planetary/apod"
     private let apiKey = "jPMTSQdqe0q2AKJw8F89Ms6nLfArhdMW6qIcaTua"
     
-
-    func getTodaysDate() -> String {
-        let today = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter.string(from: today)
-    }
-
-
-    func getStartDate() -> String {
-        let today = getTodaysDate()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        
-
-        guard let todayDateObj = dateFormatter.date(from: today) else {
-            print("Error: Invalid endDateString format")
-            return ""
-        }
-        guard let startDateObj = Calendar.current.date(byAdding: .day, value: -30, to: todayDateObj) else {
-            print("Error: Could not calculate startDate")
-            return ""
-        }
-        
-        let startDateString =  String(dateFormatter.string(from: startDateObj).prefix(11))
-        
-        return startDateString
-    }
-
-    
     func fetchPictureOfTheDay(completion: @escaping (Result<PictureOfTheDay, Error>) -> Void) {
         guard let url = URL(string: "\(baseURL)?api_key=\(apiKey)") else {
             completion(.failure(NSError(domain: "Invalid URL", code: 400, userInfo: nil)))
