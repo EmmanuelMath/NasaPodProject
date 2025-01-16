@@ -173,6 +173,7 @@ The app integrates with NASA's APOD API for its features.
 - Add animations for better user experience when transitioning between screens.
 - Support custom date ranges for the Recent Pictures feature.
 - Introduce accessibility improvements for visually impaired users.
+- Implement a solution to secure API key
 
 ---
 
